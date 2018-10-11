@@ -1,9 +1,9 @@
 :root {
-	--backgroundColor: #b4c4e1;
-	--boxColor: #cbdbfa;
-	--textColor: #3e5072;
-	--higglightColor: #8ac4db;
-	--shadeColor: 0px 0px 2px 2px #79aadf;
+	--backgroundColor: #cec8de;
+	--boxColor: #ccdaf1;
+	--textColor: #92848b;
+	--higglightColor: #b5def2;
+	--shadeColor: 0px 0px 2px 2px #c1c6c4;
 }
 
 @font-face {
