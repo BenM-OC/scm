@@ -23,39 +23,12 @@ html {
 }
 
 .sidenav {
+	padding: 5px;
 	grid-area: sidenav;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, 1fr);
 }
-
-.hamBar {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-		.hamBarContainer {
-			display: inline-block;
-			cursor: pointer;
-		}
-
-
-			/* Rotate first bar */
-		.change .hamBar1 {
-		    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-		    transform: rotate(-45deg) translate(-9px, 6px) ;
-		}
-
-		/* Fade out the second bar */
-		.change .hamBar2 {
-		    opacity: 0;
-		}
-
-		/* Rotate last bar */
-		.change .hamBar3 {
-		    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-		    transform: rotate(45deg) translate(-8px, -8px) ;
-		}
-
 
 .allBodyContent {
 	display: grid;
