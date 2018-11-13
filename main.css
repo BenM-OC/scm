@@ -1,9 +1,7 @@
 :root {
-	--backgroundColor: #b4c4e1;
-	--boxColor: #cbdbfa;
-	--textColor: #3e5072;
-	--higglightColor: #8ac4db;
-	--shadeColor: 0px 0px 2px 2px #79aadf;
+	--boxColor: gray;
+	--textColor: lightgrey;
+	--shadeColor: 0px 0px 2px 2px darkgrey;
 }
 
 @font-face {
@@ -17,67 +15,85 @@
 html {
 	color: var(--textColor);
 	font-color: var(--textColor);
-	background: var(--backgroundColor);
+	background-image: linear-gradient(to right, black, white);
 	height: 100%;
 	font-family: ibm_plex_monoitalic;
 }
 
-.sidenav {
-	padding: 5px;
-	grid-area: sidenav;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, 1fr);
+body {
+	margin: 0;
 }
 
-.allBodyContent {
+body h1 {
+	float: left
+}
+
+.headerBar {
 	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 1fr 20fr;
-	grid-template-rows:  1fr 9fr 1fr;
+	background: var(--boxColor);
+ 	grid-template-columns: repeat(3, 1fr);
+}
+
+.headerBar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+
+.allBodyContent {
+	padding: 1rem;
+	display: grid;
+	grid-gap: 2.5rem;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows:  repeat(5, 1fr);
 	grid-template-areas: 
-	"sidenav scmHeader"
-	"sidenav CenterSection"
-	"sidenav socialmediabar" ;
+	" hardwareProjects softwareProjects . . . "
+	" programmingTutorials scmHeader scmHeader scmHeader . "
+	" linuxContent scmHeader scmHeader scmHeader ."
+	" designProjects scmHeader scmHeader scmHeader . "
+	"  socialMediaBar socialMediaBar socialMediaBar socialMediaBar socialMediaBar " ;
 }
 
 .scmHeader{
+	grid-area: scmHeader;
 	font-size: 2rem;
 	padding-left: 1rem;
 }
 
+.hardwareProjects {
+	grid-area: hardwareProjects;
+}
+
+.softwareProjects {
+	grid-area: softwareProjects;
+}
+
+.designProjects {
+	grid-area: designProjects;
+}
+
+.linuxContent {
+	grid-area: linuxContent;
+}
+
+.programmingTutorials {
+	grid-area: programmingTutorials;
+}
+
 .boxCards {
-	list-style: none;
 	display: grid;
+	text-align: center;
 	align-items: center;
 	background: var(--boxColor);
 	box-shadow: var(--shadeColor);
 
 }
 
-.CenterSection {
-	grid-are: CenterSection;
-}
-
 .socialmediabar {
-	gird-area: socialmediabar;
+	grid-area: socialMediaBar;
 }
-
-.showcase {
-	grid-area: showcase;
-	min-height: 300px;
-	background: url(media/images/songofrain.png);
-	background-size: cover;
-	background-position: center;
-	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	
-	justify-content: center;
-	box-shadow: var(--shadow);
-	position: relative;
-}
-
 
 .socialmediabar {
 	text-align: center;
