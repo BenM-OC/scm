@@ -1,9 +1,7 @@
 :root {
-	--backgroundColor: #b4c4e1;
-	--boxColor: #cbdbfa;
-	--textColor: #3e5072;
-	--higglightColor: #8ac4db;
-	--shadeColor: 0px 0px 2px 2px #79aadf;
+	--boxColor: gray;
+	--textColor: lightgrey;
+	--shadeColor: 0px 0px 2px 2px darkgrey;
 }
 
 @font-face {
@@ -17,94 +15,85 @@
 html {
 	color: var(--textColor);
 	font-color: var(--textColor);
-	background: var(--backgroundColor);
+	background-image: linear-gradient(to right, black, white);
 	height: 100%;
 	font-family: ibm_plex_monoitalic;
 }
 
-.sidenav {
-	grid-area: sidenav;
+body {
+	margin: 0;
 }
 
-.hamBar {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
+body h1 {
+	float: left
 }
-		.hamBarContainer {
-			display: inline-block;
-			cursor: pointer;
-		}
 
+.headerBar {
+	display: grid;
+	background: var(--boxColor);
+ 	grid-template-columns: repeat(3, 1fr);
+}
 
-			/* Rotate first bar */
-		.change .hamBar1 {
-		    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-		    transform: rotate(-45deg) translate(-9px, 6px) ;
-		}
-
-		/* Fade out the second bar */
-		.change .hamBar2 {
-		    opacity: 0;
-		}
-
-		/* Rotate last bar */
-		.change .hamBar3 {
-		    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-		    transform: rotate(45deg) translate(-8px, -8px) ;
-		}
+.headerBar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
 
 
 .allBodyContent {
+	padding: 1rem;
 	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 1fr 20fr;
-	grid-template-rows:  1fr 9fr 1fr;
+	grid-gap: 2.5rem;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows:  repeat(5, 1fr);
 	grid-template-areas: 
-	"sidenav scmHeader"
-	"sidenav CenterSection"
-	"sidenav socialmediabar" ;
+	" hardwareProjects softwareProjects . . . "
+	" programmingTutorials scmHeader scmHeader scmHeader . "
+	" linuxContent scmHeader scmHeader scmHeader ."
+	" designProjects scmHeader scmHeader scmHeader . "
+	"  socialMediaBar socialMediaBar socialMediaBar socialMediaBar socialMediaBar " ;
 }
 
 .scmHeader{
+	grid-area: scmHeader;
 	font-size: 2rem;
 	padding-left: 1rem;
 }
 
+.hardwareProjects {
+	grid-area: hardwareProjects;
+}
+
+.softwareProjects {
+	grid-area: softwareProjects;
+}
+
+.designProjects {
+	grid-area: designProjects;
+}
+
+.linuxContent {
+	grid-area: linuxContent;
+}
+
+.programmingTutorials {
+	grid-area: programmingTutorials;
+}
+
 .boxCards {
-	list-style: none;
 	display: grid;
+	text-align: center;
 	align-items: center;
 	background: var(--boxColor);
 	box-shadow: var(--shadeColor);
 
 }
 
-.CenterSection {
-	grid-are: CenterSection;
-}
-
 .socialmediabar {
-	gird-area: socialmediabar;
+	grid-area: socialMediaBar;
 }
-
-.showcase {
-	grid-area: showcase;
-	min-height: 300px;
-	background: url(media/images/songofrain.png);
-	background-size: cover;
-	background-position: center;
-	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	
-	justify-content: center;
-	box-shadow: var(--shadow);
-	position: relative;
-}
-
 
 .socialmediabar {
 	text-align: center;
