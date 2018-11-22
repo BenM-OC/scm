@@ -1,7 +1,8 @@
 :root {
-	--boxColor: gray;
-	--textColor: lightgrey;
-	--shadeColor: 0px 0px 2px 2px darkgrey;
+	--boxColor: #373f51;
+	--textColor: #D8DBE2;
+	--shadeColor: .2rem .2rem #87919E;
+	--darkestColor: #202030;
 }
 
 @font-face {
@@ -15,9 +16,8 @@
 html {
 	color: var(--textColor);
 	font-color: var(--textColor);
-	background-image: linear-gradient(to right, black, white);
 	height: 100%;
-	font-family: ibm_plex_monoitalic;
+	background-color: var(--darkestColor);
 }
 
 body {
@@ -25,41 +25,76 @@ body {
 }
 
 body h1 {
-	float: left
+	padding-left: 1rem;
+	white-space: nowrap;
+}
+
+button {
+
 }
 
 .headerBar {
 	display: grid;
+	padding: 0.5rem;
 	background: var(--boxColor);
  	grid-template-columns: repeat(3, 1fr);
+ 	grid-template-areas:
+ 	"brandName . searchBar " ;
 }
 
-.headerBar input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    font-size: 17px;
+.pageTitle {
+	grid-area: pageTitle;
 }
+
+.brandName {
+	display: grid;
+	grid-template-columns: 1fr  7fr;
+	grid-template-areas: "openbtn pageTitle"
+	padding-left: 1rem;
+	grid-area: brandName;
+}
+
+.searchBar {
+	border: none;
+	background-color: var(--darkestColor);
+	grid-area: searchBar;
+	font-size: 1rem;
+	margin: 1rem;
+}
+
+
 
 
 .allBodyContent {
 	padding: 1rem;
 	display: grid;
-	grid-gap: 2.5rem;
+	grid-gap: 2rem;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows:  repeat(5, 1fr);
 	grid-template-areas: 
-	" hardwareProjects softwareProjects . . . "
-	" programmingTutorials scmHeader scmHeader scmHeader . "
-	" linuxContent scmHeader scmHeader scmHeader ."
-	" designProjects scmHeader scmHeader scmHeader . "
-	"  socialMediaBar socialMediaBar socialMediaBar socialMediaBar socialMediaBar " ;
+	" hardwareProjects scmHeader scmHeader scmHeader writingPieces "
+	" softwareProjects scmHeader scmHeader scmHeader gamingContent "
+	" linuxContent scmHeader scmHeader scmHeader . "
+	" . . . . . "
+	"  . . . . . " ;
 }
 
 .scmHeader{
+	display: grid;
 	grid-area: scmHeader;
 	font-size: 2rem;
 	padding-left: 1rem;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	" headerLeftHalf headerRightHalf ";
+}
+
+#headerLeftHalf {
+	grid-area: headerLeftHalf;
+}
+
+#headerRightHalf {
+	grid-area: headerRightHalf;
 }
 
 .hardwareProjects {
@@ -70,45 +105,93 @@ body h1 {
 	grid-area: softwareProjects;
 }
 
-.designProjects {
-	grid-area: designProjects;
-}
-
 .linuxContent {
 	grid-area: linuxContent;
 }
 
-.programmingTutorials {
-	grid-area: programmingTutorials;
+.writingPieces {
+	grid-area: writingPieces;
 }
+
+.gamingContent {
+	grid-area: gamingContent;
+}
+
 
 .boxCards {
 	display: grid;
 	text-align: center;
 	align-items: center;
 	background: var(--boxColor);
-	box-shadow: var(--shadeColor);
+	padding: .5rem;
 
 }
 
-.socialmediabar {
-	grid-area: socialMediaBar;
-}
-
-.socialmediabar {
-	text-align: center;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(6, 1fr);
+.smallboxCards {
 	color: var(--textColor);
-}
+	display: grid;
+	text-align: center;
+	align-items: center;
+	background: var(--boxColor);
+	padding: .5rem;
 
-
-.socialmediabar a {
-	text-decoration: none;
-	color: var(--light);
 }
 
 .footer {
 	text-align: center;
+}
+
+
+
+
+
+
+
+.sidebar {
+	display: grid;
+	grid-gap: 1fr;
+	grid-template-rows: 1fr 6fr;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-areas: 
+		". closebtn . " 
+		" . socialMediaNav . ";
+	text-align: center;
+	display: grid;
+	grid-gap: 20px;
+	color: var(--textColor);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--boxColor);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar a {
+	align-content: center;
+	color: var(--textColor);
+}
+
+.sidebar a:hover {
+}
+
+.sidebar .closebtn {
+	grid-area: closebtn;
+}
+
+.socialMediaNav {
+	grid-area: socialMediaNav;
+}
+
+
+.openbtn:hover {
+    background-color: var(--textColor);
+    color: var(--darkestColor);
+}
+
+#main {
+    transition: margin-left .5s;
 }
