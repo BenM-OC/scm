@@ -33,6 +33,11 @@ button {
 
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 a {
 	text-decoration: none;
 }
@@ -73,21 +78,21 @@ a {
 	padding: 1rem;
 	display: grid;
 	grid-gap: 2rem;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: 1fr 6fr 1fr;
 	grid-template-rows:  repeat(5, 1fr);
 	grid-template-areas: 
-	" hardwareProjects scmHeader scmHeader scmHeader writingPieces "
-	" softwareProjects scmHeader scmHeader scmHeader gamingContent "
-	" linuxContent scmHeader scmHeader scmHeader . "
-	" . . . . . "
-	"  . . . . . " ;
+	" hardwareProjects scmHeader writingPieces "
+	" softwareProjects scmHeader gamingContent "
+	" linuxContent scmHeader vlogsContent "
+	". . ."
+	". . . " ;
 }
 
 .scmHeader{
 	display: grid;
 	grid-area: scmHeader;
+	grid-gap: 2rem;
 	font-size: 2rem;
-	padding-left: 1rem;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
 	" headerLeftHalf headerRightHalf ";
@@ -121,6 +126,10 @@ a {
 	grid-area: gamingContent;
 }
 
+.vlogsContent {
+	grid-area: vlogsContent;
+}
+
 
 .boxCards {
 	display: grid;
@@ -128,8 +137,11 @@ a {
 	align-items: center;
 	background: var(--boxColor);
 	padding: .5rem;
-	border: 1px solid var(--shadeColor);
+}
 
+.allBodyContent .boxCards {
+
+	border: 1px solid var(--shadeColor);
 }
 
 .smallboxCards {
@@ -137,11 +149,10 @@ a {
 	text-align: center;
 	align-items: center;
 	background: var(--darkestColor);
-	padding: .5rem;
 	border-radius: 50%;
 	border: var(--darkestColor);
-	height: 5rem;
-	width: 5rem;
+	height: 6rem;
+	width: 6rem;
 }
 
 .footer {
@@ -213,3 +224,4 @@ a {
 #main {
     transition: margin-left .5s;
 }
+
