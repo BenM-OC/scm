@@ -1,7 +1,7 @@
 :root {
 	--boxColor: #373f51;
 	--textColor: #D8DBE2;
-	--shadeColor: .2rem .2rem #87919E;
+	--shadeColor: #87919E;
 	--darkestColor: #202030;
 }
 
@@ -31,6 +31,10 @@ body h1 {
 
 button {
 
+}
+
+a {
+	text-decoration: none;
 }
 
 .headerBar {
@@ -124,17 +128,20 @@ button {
 	align-items: center;
 	background: var(--boxColor);
 	padding: .5rem;
+	border: 1px solid var(--shadeColor);
 
 }
 
 .smallboxCards {
-	color: var(--textColor);
 	display: grid;
 	text-align: center;
 	align-items: center;
-	background: var(--boxColor);
+	background: var(--darkestColor);
 	padding: .5rem;
-
+	border-radius: 50%;
+	border: var(--darkestColor);
+	height: 5rem;
+	width: 5rem;
 }
 
 .footer {
@@ -149,15 +156,14 @@ button {
 
 .sidebar {
 	display: grid;
-	grid-gap: 1fr;
-	grid-template-rows: 1fr 6fr;
-	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-rows: 1fr 1fr 10fr;
+	grid-template-columns: 1fr 8fr 1fr;
 	grid-template-areas: 
-		". closebtn . " 
+		" . closebtn . " 
+		" . . . "
 		" . socialMediaNav . ";
 	text-align: center;
 	display: grid;
-	grid-gap: 20px;
 	color: var(--textColor);
     height: 100%;
     width: 0;
@@ -165,7 +171,7 @@ button {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--boxColor);
+    background-color: var(--textColor);
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -178,14 +184,26 @@ button {
 .sidebar a:hover {
 }
 
-.sidebar .closebtn {
+.closebtn {
+	margin-top: 1.25vw;
 	grid-area: closebtn;
+}
+
+.fa-window-close {
+	align-content: center;
+	color: red;
+}
+
+.sidebar .closebtn {
 }
 
 .socialMediaNav {
 	grid-area: socialMediaNav;
 }
 
+.boxCards #openBtn {
+	border: none;
+}
 
 .openbtn:hover {
     background-color: var(--textColor);
