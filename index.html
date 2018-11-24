@@ -13,7 +13,9 @@
 		<title>SSM Home</title>
 		<link rel="stylesheet" type="text/css" href="main.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+		<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
 
 	</head>
 
@@ -64,65 +66,131 @@
 
 				
 			</div>
+			
+			<input class="searchBar" type="text" placeholder=" Search...">
 
-			<input class ="searchBar" type="text" placeholder=" Search...">
+			</div>
+
 		</div>
 
 		<br>
 
 		<div class = "allBodyContent">
 			<div class = "scmHeader">
-				<div id = "headerLeftHalf" class = "boxCards">
-					<p>CompSci Highlights</p>
-					
 
+				<!-- <img src="https://picsum.photos/1920/1080?random"> --> 
 
+				<div id = "headerLeftHalf" class = "highlights boxCards">
+					<div class="slideTitle">
+						<p>CompSci Highlights</p>
+					</div>
+
+					<div class="slider">
+						<div class="slides">
+							<div id="slide-1">
+								<img src="https://picsum.photos/1920/1080?random">
+							</div>
+							<br> 
+							<div id="slide-2">
+								<img src="https://picsum.photos/1920/1081?random">
+							</div>
+							<div id="slide-3">
+								<img src="https://picsum.photos/1921/1080?random">
+							</div>
+							<div id="slide-4">
+								<img src="https://picsum.photos/1921/1081?random">
+							</div>
+							<div id="slide-5">
+								<img src="https://picsum.photos/1920/1082?random">
+							</div>
+						</div>
+						<br>
+						<div class="slideNav"> 
+							<a href="#slide-1">1</a>
+							<a href="#slide-2">2</a>
+							<a href="#slide-3">3</a>
+							<a href="#slide-4">4</a>
+							<a href="#slide-5">5</a>
+						</div>
+					</div>
 				</div>
 
-				<div id = "headerRightHalf" class = "boxCards">
-					<p>Personal Life Highlights</p>
+				<div id = "headerRightHalf" class = "highlights boxCards">
+					<div class = "slideTitle">
+						<p>Personal Life Highlights</p>
+					</div>
 
+					<div class="slider">
+						<div class="slides">
+							<div id="slide-1b">
+								<img src="https://picsum.photos/1920/1080?random">
+							</div>
+							<div id="slide-2b">
+								<img src="https://picsum.photos/1920/1080?random">
+							</div>
+							<div id="slide-3b">
+								<img src="https://picsum.photos/1920/1080?random">
+							</div>
+							<div id="slide-4b">
+								<img src="https://picsum.photos/1920/1080?random">
+							</div>
+							<div id="slide-5b">
+								<img src="https://picsum.photos/1920/1080?random">
+							</div>
+						</div>
+
+						<br>
+
+						<div class="slideNav">
+							<a href="#slide-1b">1</a>
+							<a href="#slide-2b">2</a>
+							<a href="#slide-3b">3</a>
+							<a href="#slide-4b">4</a>
+							<a href="#slide-5b">5</a>
+						</div>
+
+					</div>
 				</div>
 				
 			</div>
 
-			<div class = "boxCards hardwareProjects">
+			<div class = "boxCards hardwareProjects" id="hoverCard">
 				<p>Hardware Projects</p>
 				<i class="fas fa-server fa-4x"></i>
 			</div>
 
-			<div class = "boxCards softwareProjects">
+			<div class = "boxCards softwareProjects" id="hoverCard">
 				<p>Software Projects</p>
 				<i class="fab fa-git-square fa-4x"></i>
 			</div>
 
-			<div class = "boxCards linuxContent" >
+			<div class = "boxCards linuxContent" id="hoverCard">
 				<p>Linux Content</p>
 				<i class="fab fa-linux fa-4x"></i>
 			</div>
 
-			<div class = "boxCards writingPieces" >
+			<div class = "boxCards writingPieces" id="hoverCard">
 				<p>Writing Pieces</p>
 				<i class="fas fa-edit fa-4x"></i>
 			</div>
 
-			<div class = "boxCards gamingContent" >
+			<div class = "boxCards gamingContent" id="hoverCard">
 				<p>Gaming Content</p>
 				<i class="fas fa-gamepad fa-4x"></i>
 			</div>
 
-			<div class = "boxCards vlogsContent" >
+			<div class = "boxCards vlogsContent" id="hoverCard">
 				<p>Vlogs</p>
 				<i class="fas fa-video fa-4x"></i>
 			</div>
 		</div>
 
 
-		<section class = "footer ">
-			<footer>
+		
+			<footer class="footer">
 				<p>Simple Circuit Media &copy; 2018</p>
 			</footer>
-		</section>
+		
 
 	</body>
 </html>
