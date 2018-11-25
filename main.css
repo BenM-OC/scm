@@ -145,7 +145,7 @@ a {
 #hoverCard:hover {
 	background: var(--shadeColor);
 	color: var(--darkestColor);
-	border: 3px solid var(--darkestColor);
+	border: 1px solid var(--darkestColor);
 }
 
 .allBodyContent .boxCards {
@@ -283,10 +283,11 @@ a {
 
 .slideNav {
 	grid-area: slideNav;
+	padding-top: 10px;
 }
 
 .highlights {
-	grid-template-rows: 2fr 8fr 25px;
+	grid-template-rows: 50px 1fr 5px;
 	grid-template-areas: 
 	"slideTitle"
 	"slider"
@@ -321,3 +322,31 @@ a {
 			"headerRightHalf";
 	}
 }
+
+@media screen and (max-width: 500px) {
+	.slideNav {
+		display: none;
+	}
+
+	.slideTitle {
+		display: none;
+	}
+
+	.scmHeader {
+		grid-template-rows: 1fr;
+	}
+
+	.searchBar {
+		display: none;
+	}
+
+	.headerBar {
+		grid-template-columns: 1;
+		grid-template-areas: "brandName";
+	}
+}
+
+
+
+
+
