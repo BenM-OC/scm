@@ -49,7 +49,7 @@ a {
 	background: var(--boxColor);
  	grid-template-columns: repeat(3, 1fr);
  	grid-template-areas:
- 	"brandName . searchBar " ;
+ 	"brandName . . " ;
 }
 
 .pageTitle {
@@ -336,8 +336,8 @@ a {
 		grid-template-rows: 1fr;
 	}
 
-	.searchBar {
-		display: none;
+	.headerBar .searchBar {
+		display: hidden;
 	}
 
 	.headerBar {
