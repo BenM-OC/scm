@@ -82,29 +82,13 @@ a {
 	grid-template-columns: 1fr 6fr 1fr;
 	grid-template-rows:  2fr 2fr 2fr 1fr;
 	grid-template-areas: 
-	" hardwareProjects scmHeader writingPieces "
-	" softwareProjects scmHeader gamingContent "
-	" linuxContent scmHeader vlogsContent "
+	" hardwareProjects . writingPieces "
+	" softwareProjects . gamingContent "
+	" linuxContent . vlogsContent "
 	" . footer . "
 }
 
-.scmHeader{
-	display: grid;
-	grid-area: scmHeader;
-	grid-gap: 2rem;
-	font-size: 2rem;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 
-	" headerLeftHalf headerRightHalf ";
-}
 
-#headerLeftHalf {
-	grid-area: headerLeftHalf;
-}
-
-#headerRightHalf {
-	grid-area: headerRightHalf;
-}
 
 .hardwareProjects {
 	grid-area: hardwareProjects;
@@ -214,8 +198,6 @@ a {
 	color: red;
 }
 
-.sidebar .closebtn {
-}
 
 .socialMediaNav {
 	grid-area: socialMediaNav;
@@ -236,64 +218,6 @@ a {
 
 
 
-
-
-.slider {
-	grid-area: slider;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  overflow-x: hidden;
-  
-  scroll-behavior: smooth;
-  
-  -webkit-overflow-scrolling: touch;
-}
-
-
-.slides > div {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  position: relative;
-  background: var(--textColor);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-}
-
-
-.slideNav > a {
-	color: var(--textColor);
- 	text-decoration: none;
- 	align-items: center;
- 	justify-content: center;
- 	position: relative;
-}
-
-.slideTitle {
-	grid-area: slideTitle;
-}
-
-.slideNav {
-	grid-area: slideNav;
-	padding-top: 10px;
-}
-
-.highlights {
-	grid-template-rows: 50px 1fr 5px;
-	grid-template-areas: 
-	"slideTitle"
-	"slider"
-	"slideNav";
-}
-
 /* Don't need button navigation */
 @supports (scroll-snap-type) {
   .slider > a {
@@ -304,6 +228,8 @@ a {
 
 
 @media screen and (max-width: 1024px)  {
+
+
 	.allBodyContent {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 10fr 1fr 1fr;
@@ -313,37 +239,14 @@ a {
 			"writingPieces gamingContent vlogsContent"
 			" . footer . "
 	}
-
-	.scmHeader {
-		grid-template-columns: 1fr ;
-		grid-template-rows: 1fr 1fr;
-		grid-template-areas:
-			"headerLeftHalf"
-			"headerRightHalf";
-	}
 }
 
+
+
 @media screen and (max-width: 500px) {
-	.slideNav {
-		display: none;
-	}
 
-	.slideTitle {
-		display: none;
-	}
 
-	.scmHeader {
-		grid-template-rows: 1fr;
-	}
 
-	.headerBar .searchBar {
-		display: hidden;
-	}
-
-	.headerBar {
-		grid-template-columns: 1;
-		grid-template-areas: "brandName";
-	}
 }
 
 
