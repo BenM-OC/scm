@@ -224,19 +224,40 @@ a {
 
 	.allBodyContent {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 25px;
 		grid-template-areas: 
 			"hardwareProjects softwareProjects linuxContent"
 			" . . . "
 			"writingPieces gamingContent vlogsContent"
 			" . footer . "
 	}
+
+
+	.sidebar {
+	display: grid;
+	grid-template-rows: 1fr 30px 10fr;
+	grid-template-columns: 1fr 8fr 1fr;
+	grid-template-areas: 
+		" . closebtn . " 
+		" . . . "
+		" . socialMediaNav . ";
+	text-align: center;
+	display: grid;
+	color: var(--textColor);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--textColor);
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
-	.smallBoxCards {
-		height: 4rem ;
-		width: 4rem ;
-	}
+}
+
+	
 
 
 
