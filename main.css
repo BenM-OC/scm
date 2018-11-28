@@ -227,7 +227,7 @@ a {
 		grid-template-rows: 1fr 1fr 1fr 1fr;
 		grid-template-areas: 
 			"hardwareProjects softwareProjects linuxContent"
-			"scmHeader scmHeader scmHeader"
+			" . . . "
 			"writingPieces gamingContent vlogsContent"
 			" . footer . "
 	}
