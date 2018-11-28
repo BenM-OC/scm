@@ -16,7 +16,6 @@
 html {
 	color: var(--textColor);
 	font-color: var(--textColor);
-	height: 100%;
 	background-color: var(--darkestColor);
 }
 
