@@ -60,9 +60,8 @@ a:hover {
 	display: grid;
 	grid-gap: 2rem;
 	grid-template-columns: 1fr 6fr 1fr;
-	grid-template-rows: 3rem 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	grid-template-areas:
-	" . . . " 
 	" hardwareProjects . writingPieces "
 	" softwareProjects . gamingContent "
 	" linuxContent . vlogsContent "
