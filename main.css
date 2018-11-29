@@ -46,16 +46,6 @@ a {
 	grid-area: brandName;
 }
 
-.searchBar {
-	border: none;
-	background-color: var(--darkestColor);
-	grid-area: searchBar;
-	font-size: 1rem;
-	margin: 1rem;
-}
-
-
-
 
 .allBodyContent {
 	padding: 1rem;
@@ -126,8 +116,6 @@ a {
 	background: var(--darkestColor);
 	border-radius: 50%;
 	border: var(--darkestColor);
-	height: 6rem;
-	width: 6rem;
 }
 
 .footer {
@@ -228,7 +216,7 @@ a {
 	.sidebar {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 50px 50px 1fr;
+		grid-template-rows: 10px 50px 1fr;
 		grid-template-columns: 1fr 8fr 1fr;
 		grid-template-areas: 
 			" . closebtn . " 
