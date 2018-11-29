@@ -27,7 +27,6 @@ a {
 .headerBar {
 	display: grid;
 	border-bottom: 1px solid var(--shadeColor);
-	padding: 0.5rem;
 	background: var(--boxColor);
  	grid-template-columns: repeat(3, 1fr);
  	grid-template-areas:
@@ -48,6 +47,7 @@ a {
 
 
 .allBodyContent {
+	height: 100%;
 	padding: 1rem;
 	display: grid;
 	grid-gap: 2rem;
@@ -110,6 +110,8 @@ a {
 }
 
 .smallboxCards {
+	height: 75px;
+	width: 75px;
 	display: grid;
 	text-align: center;
 	align-items: center;
@@ -160,7 +162,7 @@ a {
 }
 
 .closebtn {
-	margin-top: 1.25vw;
+	margin-top: 20px;
 	grid-area: closebtn;
 }
 
@@ -184,7 +186,6 @@ a {
 }
 
 #main {
-
     transition: margin-left .5s;
 }
 
@@ -216,7 +217,7 @@ a {
 	.sidebar {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 10px 50px 1fr;
+		grid-template-rows: 50px 50px 1fr;
 		grid-template-columns: 1fr 8fr 1fr;
 		grid-template-areas: 
 			" . closebtn . " 
