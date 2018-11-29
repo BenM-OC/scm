@@ -2,14 +2,15 @@
 	--boxColor: #373f51;
 	--textColor: #D8DBE2;
 	--shadeColor: #87919E;
-	--darkestColor: #202030;
+	--backgroundColor: #202030;
 }
+
 
 html {
 	height: 100vh;
 	color: var(--textColor);
 	font-color: var(--textColor);
-	background-color: var(--darkestColor);
+	background-color: var(--backgroundColor);
 }
 
 body {
@@ -27,12 +28,14 @@ a {
 }
 
 a:hover {
-	color: var(--darkestColor);
+	color: var(--backgroundColor);
 }
 
 .headerBar {
 	border-bottom: 1px solid var(--shadeColor);
 	background: var(--boxColor);
+	position: fixed;
+	width: 100vw;
 }
 
 .pageTitle {
@@ -42,9 +45,13 @@ a:hover {
 .brandName {
 	display: grid;
 	grid-template-columns: 1fr  18fr 1fr;
-	grid-template-areas: "openbtn pageTitle .";
+	grid-template-areas: "openbtn pageTitle colorSchemeToggle";
 	padding-left: 1rem;
 	grid-area: brandName;
+}
+
+.colorSchemeToggle {
+	grid-area: colorSchemeToggle;
 }
 
 
@@ -54,8 +61,9 @@ a:hover {
 	display: grid;
 	grid-gap: 2rem;
 	grid-template-columns: 1fr 6fr 1fr;
-	grid-template-rows:  1fr 1fr 1fr 1fr;
-	grid-template-areas: 
+	grid-template-rows: 3rem 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	" . . . " 
 	" hardwareProjects . writingPieces "
 	" softwareProjects . gamingContent "
 	" linuxContent . vlogsContent "
@@ -102,8 +110,8 @@ a:hover {
 
 #hoverCard:hover {
 	background: var(--shadeColor);
-	color: var(--darkestColor);
-	border: 1px solid var(--darkestColor);
+	color: var(--backgroundColor);
+	border: 1px solid var(--backgroundColor);
 }
 
 .allBodyContent .boxCards {
@@ -114,8 +122,8 @@ a:hover {
 .smallboxCards {
 	height: 4rem;
 	width: 4rem;
-	background: var(--darkestColor);
-	border: var(--darkestColor);
+	background: var(--backgroundColor);
+	border: var(--backgroundColor);
 	margin: auto;
 	display: flex;
 	justify-content: center;
@@ -180,7 +188,7 @@ a:hover {
 
 .openbtn:hover {
     background-color: var(--textColor);
-    color: var(--darkestColor);
+    color: var(--backgroundColor);
 }
 
 #main {
