@@ -226,9 +226,9 @@ a {
 
 
 	.sidebar {
-		height: 1vw;
+		height: 100%;
 		display: grid;
-		grid-template-rows: 1fr 30px 1fr;
+		grid-template-rows: 50px 50px 1fr;
 		grid-template-columns: 1fr 8fr 1fr;
 		grid-template-areas: 
 			" . closebtn . " 
@@ -248,10 +248,16 @@ a {
 	    transition: 0.5s;
 	}
 
+	.socialMediaNav {
+		text-align: center;
+		align-content: center;
+	}
+
 
 	.smallboxCards {
-		height: 12vh;
-		width: 20vw;
+		margin: 0 auto;
+		height: 75px;
+		width: 75px;
 	}
 
 }
