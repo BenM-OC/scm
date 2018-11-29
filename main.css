@@ -5,14 +5,6 @@
 	--darkestColor: #202030;
 }
 
-@font-face {
-    font-family: 'ibm_plex_monoitalic';
-    src: url('ibmplexmono-italic-webfont.woff2') format('woff2'),
-         url('ibmplexmono-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html {
 	color: var(--textColor);
 	font-color: var(--textColor);
@@ -49,7 +41,7 @@ a {
 .brandName {
 	display: grid;
 	grid-template-columns: 1fr  7fr;
-	grid-template-areas: "openbtn pageTitle"
+	grid-template-areas: "openbtn pageTitle";
 	padding-left: 1rem;
 	grid-area: brandName;
 }
@@ -204,6 +196,7 @@ a {
 }
 
 #main {
+
     transition: margin-left .5s;
 }
 
@@ -233,26 +226,36 @@ a {
 
 
 	.sidebar {
-	display: grid;
-	grid-template-rows: 1fr 30px 10fr;
-	grid-template-columns: 1fr 8fr 1fr;
-	grid-template-areas: 
-		" . closebtn . " 
-		" . . . "
-		" . socialMediaNav . ";
-	text-align: center;
-	display: grid;
-	color: var(--textColor);
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: var(--textColor);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
+		height: 1vw;
+		display: grid;
+		grid-template-rows: 1fr 30px 1fr;
+		grid-template-columns: 1fr 8fr 1fr;
+		grid-template-areas: 
+			" . closebtn . " 
+			" . . . "
+			" . socialMediaNav . ";
+		text-align: center;
+		display: grid;
+		color: var(--textColor);
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: var(--textColor);
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	}
+
+
+	.smallboxCards {
+		height: 12vh;
+		width: 20vw;
+	}
+
+
+
 
 }
 
