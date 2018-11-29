@@ -23,7 +23,9 @@ body h1 {
 
 a {
 	text-decoration: none;
+	color: var(--textColor);
 }
+
 
 .headerBar {
 	border-bottom: 1px solid var(--shadeColor);
