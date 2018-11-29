@@ -43,16 +43,23 @@ a:hover {
 
 .brandName {
 	display: grid;
-	grid-template-columns: 1fr  18fr 1fr;
+	grid-template-columns: 1fr  16fr 3fr;
 	grid-template-areas: "openbtn pageTitle colorSchemeToggle";
 	padding-left: 1rem;
 	grid-area: brandName;
 }
 
 .colorSchemeToggle {
+	text-align: center;
+	display: flex;
 	grid-area: colorSchemeToggle;
+	background-color: red;
 }
 
+.colorSchemeToggle a {
+	margin: auto;
+
+}
 
 .allBodyContent {
 	height: 80vh;
