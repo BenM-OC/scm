@@ -26,6 +26,9 @@ a {
 	color: var(--textColor);
 }
 
+a:hover {
+	color: var(--darkestColor);
+}
 
 .headerBar {
 	border-bottom: 1px solid var(--shadeColor);
@@ -109,14 +112,20 @@ a {
 }
 
 .smallboxCards {
-	height: 75px;
-	width: 75px;
-	display: grid;
-	text-align: center;
-	align-items: center;
+	height: 4rem;
+	width: 4rem;
 	background: var(--darkestColor);
-	border-radius: 50%;
 	border: var(--darkestColor);
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+
+.smallboxCards a {
+	justify-content: center;
 }
 
 .footer {
@@ -125,35 +134,7 @@ a {
 
 
 
-
-
-
-
-
-
-.sidebar {
-	display: grid;
-	grid-template-rows: 1fr 1fr 10fr;
-	grid-template-columns: 1fr 8fr 1fr;
-	grid-template-areas: 
-		" . closebtn . " 
-		" . . . "
-		" . socialMediaNav . ";
-	text-align: center;
-	display: grid;
-	color: var(--textColor);
-    height: 80vw;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: var(--textColor);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.sidebar a {
+.socialMediaNav a {
 	align-content: center;
 	color: var(--textColor);
 }
@@ -174,7 +155,36 @@ a {
 
 .socialMediaNav {
 	grid-area: socialMediaNav;
+	text-align: center;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-areas: 
+	"closebtn"
+	"facebook"
+	"twitter"
+	"linkedin"
+	"youtube"
+	"instagram"
+	"reddit";
+		color: var(--textColor);
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: var(--textColor);
+	    overflow-x: hidden;
+	    transition: 0.5s;
+
 }
+
+.fa-facebook { grid-area: facebook; }
+.fa-twitter { grid-area: twitter; }
+.fa-linkedin { grid-area: linkedin; }
+.fa-youtube { grid-area: youtube; }
+.fa-instagram {grid-area: instagram; }
+.fa-reddit { grid-area: reddit; }
 
 .boxCards #openBtn {
 	border: none;
@@ -186,6 +196,7 @@ a {
 }
 
 #main {
+	height:80vh;
     transition: margin-left .5s;
 }
 
@@ -214,39 +225,8 @@ a {
 	}
 
 
-	.sidebar {
-		display: grid;
-		grid-template-rows: 50px 50px 1fr;
-		grid-template-columns: 1fr 8fr 1fr;
-		grid-template-areas: 
-			" . closebtn . " 
-			" . . . "
-			" . socialMediaNav . ";
-		text-align: center;
-		display: grid;
-		color: var(--textColor);
-	    height: 100%;
-	    width: 0;
-	    position: fixed;
-	    z-index: 1;
-	    top: 0;
-	    left: 0;
-	    background-color: var(--textColor);
-	    overflow-x: hidden;
-	    transition: 0.5s;
-	}
-
-	.socialMediaNav {
-		text-align: center;
-		align-content: center;
-	}
 
 
-	.smallboxCards {
-		margin: 0 auto;
-		height: 75px;
-		width: 75px;
-	}
 
 }
 
