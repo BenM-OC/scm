@@ -5,12 +5,12 @@
 	--backgroundColor: #202030;
 }
 
-
 html {
 	height: 100vh;
 	color: var(--textColor);
 	font-color: var(--textColor);
 	background-color: var(--backgroundColor);
+	font-size: 2vh;
 }
 
 body {
@@ -32,10 +32,9 @@ a:hover {
 }
 
 .headerBar {
+
 	border-bottom: 1px solid var(--shadeColor);
 	background: var(--boxColor);
-	position: fixed;
-	width: 100vw;
 }
 
 .pageTitle {
