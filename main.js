@@ -1,6 +1,6 @@
 
 function openNav() {
-    document.getElementById("socialMediaNav").style.width = "8vw";
+    document.getElementById("socialMediaNav").style.width = "100px";
     document.getElementById("main").style.marginLeft = "0px";
 }
 
