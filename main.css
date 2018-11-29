@@ -143,9 +143,13 @@ a:hover {
 }
 
 .closebtn {
-	margin-top: 20px;
 	grid-area: closebtn;
 }
+
+#closebtn {
+	background-color: var(--textColor);
+}
+
 
 .fa-window-close {
 	align-content: center;
@@ -157,34 +161,18 @@ a:hover {
 	grid-area: socialMediaNav;
 	text-align: center;
 	display: grid;
-	grid-gap: 5px;
-	grid-template-areas: 
-	"closebtn"
-	"facebook"
-	"twitter"
-	"linkedin"
-	"youtube"
-	"instagram"
-	"reddit";
-		color: var(--textColor);
-	    height: 100%;
-	    width: 0;
-	    position: fixed;
-	    z-index: 1;
-	    top: 0;
-	    left: 0;
-	    background-color: var(--textColor);
-	    overflow-x: hidden;
-	    transition: 0.5s;
+	color: var(--textColor);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--textColor);
+    overflow-x: hidden;
+    transition: 0.5s;
 
 }
-
-.fa-facebook { grid-area: facebook; }
-.fa-twitter { grid-area: twitter; }
-.fa-linkedin { grid-area: linkedin; }
-.fa-youtube { grid-area: youtube; }
-.fa-instagram {grid-area: instagram; }
-.fa-reddit { grid-area: reddit; }
 
 .boxCards #openBtn {
 	border: none;
@@ -200,14 +188,6 @@ a:hover {
     transition: margin-left .5s;
 }
 
-
-
-/* Don't need button navigation */
-@supports (scroll-snap-type) {
-  .slider > a {
-    display: none;
-  }
-}
 
 
 
