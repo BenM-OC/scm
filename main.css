@@ -6,6 +6,7 @@
 }
 
 html {
+	height: 100vh;
 	color: var(--textColor);
 	font-color: var(--textColor);
 	background-color: var(--darkestColor);
@@ -17,7 +18,7 @@ body {
 
 body h1 {
 	padding-left: 1rem;
-	white-space: nowrap;
+	font-size: 4vh;
 }
 
 a {
@@ -25,12 +26,8 @@ a {
 }
 
 .headerBar {
-	display: grid;
 	border-bottom: 1px solid var(--shadeColor);
 	background: var(--boxColor);
- 	grid-template-columns: repeat(3, 1fr);
- 	grid-template-areas:
- 	"brandName . . " ;
 }
 
 .pageTitle {
