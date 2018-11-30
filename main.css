@@ -39,6 +39,15 @@ a:hover {
 	grid-template-areas: "openbtn pageTitle colorSchemeToggle";
 }
 
+.headerBar div:hover {
+	color: var(--textColor);
+	background: var(--boxColor);
+}
+
+.headerBar a:hover {
+	color: var(--textColor);
+}
+
 .pageTitle {
 	grid-area: pageTitle;
 	text-align: center;
@@ -54,7 +63,6 @@ a:hover {
 
 .colorSchemeToggle {
 	grid-area: colorSchemeToggle;
-	color: red;
 }
 
 .colorSchemeToggle i {
