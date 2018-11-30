@@ -16,20 +16,20 @@
 
 	</head>
 
-	<body id="main">
+	<body href="javascript:void(0)" id="main" onload="onLoad()" id="main">
 			
 		<div class="socialMediaNav" id="socialMediaNav">
 			<div class ="smallboxCards" id="closebtn">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeSocialMediaNav()">
 					<i class="fas fa-window-close fa-3x"></i>
 				</a>
 			</div>
 
 			<div class="smallboxCards">
-					<a href="https://www.facebook.com/simplecircuitmedia" target="_blank">
-						<i class="fab fa-facebook fa-3x"></i>
-					</a>
-				</div>
+				<a href="https://www.facebook.com/simplecircuitmedia" target="_blank">
+					<i class="fab fa-facebook fa-3x"></i>
+				</a>
+			</div>
 
 				
 				<div class="smallboxCards">
@@ -53,61 +53,78 @@
 			</div>
 		</div>
 
+		<div class="colorSchemePicker" id="colorSchemePicker">
 
-		<div class="headerBar">
-			<div class="brandName">
-				<div class="boxCards openbtn" id="openBtn"onclick="openNav()">
-					<i class="fas fa-bars fa-2x"></i>
-				</div>
-
-				<div class="pageTitle">
-					<h1>Simple Circuit Media</h1>
-				</div>
-
-				<div class="colorSchemeToggle">
-
-					<a href="javascript:void(0)" class="lightToggle" onclick="toggleLightScheme()">Light </a>
-
-					<a href="javascript:void(0)" class="darkToggle" onclick="toggleDarkScheme()"> Dark</a>
-				</div>
-				
+			<div id = "closeColorSchemeBtn" >
+				<a href="javascript:void(0)" class="closebtn" onclick="closeColorSchemePicker()">
+					<i class="fas fa-window-close fa-3x"></i>
+				</a>
 			</div>
+
+			<div id="toggleLightScheme" >
+				<a href="javascript:void(0)" class="lightToggle" onclick="toggleLightScheme()">
+					<p>Light</p>
+					<i class="fas fa-sun fa-3x"></i>
+				</a>
+			</div>
+
+			<div id="toggleDarkScheme" >
+				<a href="javascript:void(0)" class="darkToggle" onclick="toggleDarkScheme()">
+					<p>Dark</p>
+					<i class="fas fa-moon fa-3x"></i>
+				</a>
+			</div>
+
 		</div>
 
 
-		<div class = "allBodyContent">
-			
+		<div class="headerBar">
+			<div class="boxCards openbtn" onclick="openSocialMediaNav()">
+				<i class="fas fa-bars fa-2x"></i>
+			</div>
+
+			<div class="pageTitle">
+				<h1>Simple Circuit Media</h1>
+			</div>
+
+			<div class="boxCards colorSchemeToggle" id="hoverCard" onclick="openColorSchemePicker()">
+				<i class="fas fa-palette fa-2x"></i>
+			</div>	
+		</div>
+
+
+		<div class = "allBodyContent">	
 
 			<div class = "boxCards hardwareProjects" id="hoverCard">
-				<a href="https://www.reddit.com" target="_blank">
+				<a href="test.html">
 					<p>Hardware Projects</p>
-					<i class="fas fa-server fa-4x"></i>
+					<i class="fas fa-server fa-3x"></i>
 				</a>
 			</div>
 
 			<div class = "boxCards softwareProjects" id="hoverCard">
 				<p>Software Projects</p>
-				<i class="fab fa-git-square fa-4x"></i>
+				<i class="fab fa-git-square fa-3x"></i>
 			</div>
 
 			<div class = "boxCards linuxContent" id="hoverCard">
 				<p>Linux Content</p>
-				<i class="fab fa-linux fa-4x"></i>
+				<i class="fab fa-linux fa-3x"></i>
 			</div>
 
 			<div class = "boxCards writingPieces" id="hoverCard">
 				<p>Writing Pieces</p>
-				<i class="fas fa-edit fa-4x"></i>
+				<i class="fas fa-edit fa-3x"></i>
 			</div>
 
 			<div class = "boxCards gamingContent" id="hoverCard">
 				<p>Gaming Content</p>
-				<i class="fas fa-gamepad fa-4x"></i>
+				<i class="fas fa-gamepad fa-3x"></i>
 			</div>
 
 			<div class = "boxCards vlogsContent" id="hoverCard">
 				<p>Vlogs</p>
-				<i class="fas fa-video fa-4x"></i>
+				<i class="fas fa-video fa-3x"></i>
 			</div>
 
 		</div>
