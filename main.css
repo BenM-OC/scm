@@ -39,6 +39,7 @@ a:hover {
 
 .pageTitle {
 	grid-area: pageTitle;
+	text-align: center;
 }
 
 .brandName {
