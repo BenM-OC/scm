@@ -3,6 +3,7 @@
 	--textColor: #D8DBE2;
 	--shadeColor: #87919E;
 	--backgroundColor: #202030;
+	--outOfFocus: #313848;
 }
 
 html {
@@ -110,11 +111,12 @@ a:hover {
 	grid-template-columns: 1fr 6fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr;
 	grid-template-areas:
-	" hardwareProjects . writingPieces "
-	" softwareProjects . gamingContent "
-	" linuxContent . vlogsContent "
-	" . footer . "
+	" hardwareProjects highlightArea writingPieces "
+	" softwareProjects highlightArea gamingContent "
+	" linuxContent highlightArea vlogsContent "
+	" . . . "
 }
+
 
 .hardwareProjects { grid-area: hardwareProjects; }
 .softwareProjects { grid-area: softwareProjects; }
@@ -123,6 +125,40 @@ a:hover {
 .gamingContent { grid-area: gamingContent; }
 .vlogsContent { grid-area: vlogsContent; }
 .footer{ grid-area: footer; }
+
+.highlightArea { 
+	grid-area: highlightArea; 
+	display: grid; 
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 9fr;
+	grid-template-areas: 
+	"techHlBtn hobbyHlBtn"
+	"highlightReel highlightReel";
+}
+#techHL {
+	display: none;
+	background: var(--boxColor);
+}
+
+#hobbyHL {
+	display: none;
+	background: var(--boxColor);
+}
+
+#techHlBtn {
+	grid-area: techHlBtn; 
+	border-right: 1px solid var(--backgroundColor); border-bottom: 2px solid var(--backgroundColor);
+	background: var(--outOfFocus);
+}
+#hobbyHlBtn {
+	grid-area: hobbyHlBtn;
+	border-left: 1px solid var(--backgroundColor); border-bottom: 2px solid var(--backgroundColor);
+	background: var(--outOfFocus);
+}
+#highlightReel {
+	height: 100%;
+	grid-area: highlightReel;
+}
 
 .boxCards {
 	display: grid;
@@ -224,12 +260,12 @@ a:hover {
 
 	.allBodyContent {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 25px;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
 		grid-template-areas: 
 			"hardwareProjects softwareProjects linuxContent"
-			" . . . "
+			" highlightArea highlightArea highlightArea "
 			"writingPieces gamingContent vlogsContent"
-			" . footer . "
+			" . . . "
 	}
 
 
