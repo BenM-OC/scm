@@ -7,13 +7,13 @@
 <!--In the header section of the website I've declared what character set is to be used, given the website a titlebar for the browser tab, and linked my CSS file and the fontawesome icon CSS for icons-->
 
 	<head>
+		<title>SCM Writing</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="global.js"></script>
-		<script src="home.js"></script>
-		<title>SCM Home</title>
-		<link rel="stylesheet" type="text/css" href="home.css" />
-		<link rel="stylesheet" type="text/css" href="global.css" />
+		<script src="../../global.js"></script>
+		<script src="writingPieces.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../global.css" />
+		<link rel="stylesheet" type="text/css" href="writingPieces.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 	</head>
@@ -86,7 +86,7 @@
 			</div>
 
 			<div class="pageTitle">
-				<a href = "index.html">
+				<a href = "../../index.html">
 					<h1>Simple Circuit Media</h1>
 				</a>
 			</div>
@@ -96,77 +96,55 @@
 			</div>	
 		</div>
 
+		<p class="boxCards" id="subHeader">Writing Pieces</p>
 
-		<div class = "allBodyContent">	
+		<div class ="boxCards bodyContent" id="readingPicker">
 
-			<a class = "boxCards hardwareProjects" id="hoverCard">
-				<div>
-					<p>Hardware Projects</p>
-					<i class="fas fa-server fa-3x"></i>
+
+			<div id="readingSelection">
+				<a class = "boxCards" href="javascript:void(0)" id="" onclick="displayPolitics()">
+					<p>Politics</p>
+				</a>
+
+				<a class = "boxCards" href="javascript:void(0)" id="" onclick="displayGameTheory()">
+					<p>Game Theory</p>
+				</a>
+
+				<a class = "boxCards" href="javascript:void(0)" id="" onclick="displayLoream()">
+					<p>Loream</p>
+				</a>
+
+				<a class = "boxCards" href="javascript:void(0)" id="" onclick="displayIpsum()">
+					<p>Ipsum</p>
+				</a>
+
+				<a class = "boxCards" href="javascript:void(0)" id="" onclick="displayWho()">
+					<p>Who</p>
+				</a>
+
+			</div>
+
+			<div class="boxCards" id="readingContent">
+				<div class="boxCards" id="defaultReading"> 
+					<i class="fas fa-arrow-left fa-2x"></i>
+					<p>Pick what sub catagory of writing you'd like to read</p>
 				</div>
-			</a>
-
-			<a class = "boxCards softwareProjects" id="hoverCard">
-				<div>
-					<p>Software Projects</p>
-					<i class="fab fa-git-square fa-3x"></i>
+				<div class="boxCards" id="Politics">
+					<p></p>
 				</div>
-			</a>
-
-			<a class = "boxCards linuxContent" id="hoverCard">
-				<div>
-					<p>Linux Content</p>
-					<i class="fab fa-linux fa-3x"></i>
+				<div class="boxCards" id="gameTheory">
+					<p></p>
 				</div>
-			</a>
-
-			<a href="subpages/writing-pieces/writingPieces.html" class = "boxCards writingPieces" id="hoverCard">
-				<div>
-					<p>Writing Pieces</p>
-					<i class="fas fa-edit fa-3x"></i>
+				<div class="boxCards" id="Loream">
+					<p></p>
 				</div>
-			</a>
-
-			<a class = "boxCards gamingContent" id="hoverCard">
-				<div>
-					<p>Gaming Content</p>
-					<i class="fas fa-gamepad fa-3x"></i>
+				<div class="boxCards" id="Ipsum">
+					<p></p>
 				</div>
-			</a>
-
-			<a class = "boxCards vlogsContent" id="hoverCard">
-				<div>
-					<p>Vlogs</p>
-					<i class="fas fa-video fa-3x"></i>
-				</div>
-			</a>
-
-
-			<div class = "boxCards highlightArea">
-				<div href="javascript:void(0)" id="techHlBtn" onclick="showTechHL()">
-					<p>Tech Highlights</p>
-				</div>
-				<div href="javascript:void(0)" id="hobbyHlBtn" onclick="showHobbyHL()">
-					<p>Hobby Highlights</p>
-				</div>
-				<div id="highlightReel">
-					<div id="techHL">
-						<p>THis is the techHL reel</p>
-					</div>
-					<div id="hobbyHL">
-						<p>This is the hobbyHLreel</p>
-					</div>
-					<div id="defaultHL"> 
-						<i class="fas fa-arrow-up fa-2x"></i>
-						<p>Pick what sub catagory of highlights you'd like to see</p>
-					</div>
+				<div class="boxCards" id="Who">
+					<p></p>
 				</div>
 			</div>
 
+
 		</div>
-
-
-
-	</body>
-</html>
-

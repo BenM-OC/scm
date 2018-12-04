@@ -23,13 +23,11 @@ body h1 {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: none; 
 	color: var(--textColor);
 }
 
-a:hover {
-	color: var(--backgroundColor);
-}
+
 
 .headerBar {
 	border-bottom: 1px solid var(--shadeColor);
@@ -59,6 +57,7 @@ a:hover {
 
 .openbtn i {
 	text-align: left;
+	margin-left: 20px;
 }
 
 .colorSchemeToggle {
@@ -67,6 +66,7 @@ a:hover {
 
 .colorSchemeToggle i {
 	text-align: right;
+	margin-right: 20px;
 }
 
 .colorSchemePicker {
@@ -103,79 +103,18 @@ a:hover {
 	grid-area: toggleDarkScheme;
 }
 
-.allBodyContent {
-	height: 80vh;
-	padding: 1rem;
-	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: 1fr 6fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	grid-template-areas:
-	" hardwareProjects highlightArea writingPieces "
-	" softwareProjects highlightArea gamingContent "
-	" linuxContent highlightArea vlogsContent "
-	" . . . "
-}
-
-
-.hardwareProjects { grid-area: hardwareProjects; }
-.softwareProjects { grid-area: softwareProjects; }
-.linuxContent { grid-area: linuxContent; }
-.writingPieces { grid-area: writingPieces; }
-.gamingContent { grid-area: gamingContent; }
-.vlogsContent { grid-area: vlogsContent; }
-.footer{ grid-area: footer; }
-
-.highlightArea { 
-	grid-area: highlightArea; 
-	display: grid; 
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 9fr;
-	grid-template-areas: 
-	"techHlBtn hobbyHlBtn"
-	"highlightReel highlightReel";
-}
-#techHL {
-	display: none;
-	background: var(--boxColor);
-}
-
-#hobbyHL {
-	display: none;
-	background: var(--boxColor);
-}
-
-#techHlBtn {
-	grid-area: techHlBtn; 
-	border-right: 1px solid var(--backgroundColor); border-bottom: 2px solid var(--backgroundColor);
-	background: var(--outOfFocus);
-}
-#hobbyHlBtn {
-	grid-area: hobbyHlBtn;
-	border-left: 1px solid var(--backgroundColor); border-bottom: 2px solid var(--backgroundColor);
-	background: var(--outOfFocus);
-}
-#highlightReel {
-	height: 100%;
-	grid-area: highlightReel;
-}
-
 .boxCards {
 	display: grid;
 	text-align: center;
 	align-items: center;
 	background: var(--boxColor);
-	padding: .5rem;
+	padding: .25rem;
 }
 
 #hoverCard:hover {
 	background: var(--textColor);
 	color: var(--backgroundColor);
 	border: 1px solid var(--backgroundColor);
-}
-
-.allBodyContent .boxCards {
-	border: 1px solid var(--shadeColor);
 }
 
 .smallboxCards {
@@ -194,12 +133,6 @@ a:hover {
 .smallboxCards a {
 	justify-content: center;
 }
-
-.footer {
-	text-align: center;
-}
-
-
 
 .socialMediaNav a {
 	align-content: center;
@@ -248,32 +181,6 @@ a:hover {
 }
 
 #main {
-	height:80vh;
+	height: 100vh;
     transition: margin-left .5s;
 }
-
-
-
-
-@media screen and (max-width: 1024px)  {
-
-
-	.allBodyContent {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
-		grid-template-areas: 
-			"hardwareProjects softwareProjects linuxContent"
-			" highlightArea highlightArea highlightArea "
-			"writingPieces gamingContent vlogsContent"
-			" . . . ";
-	}
-
-
-
-
-
-}
-
-
-
-

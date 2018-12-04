@@ -1,0 +1,31 @@
+#subHeader{
+	text-align:center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#readingPicker {
+	margin: 20px;
+	background: var(--backgroundColor);
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 10fr;
+	grid-template-areas: "readingSelection readingContent";
+}
+
+#readingSelection {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-rows: repeat(5, 1fr);
+}
+
+#readingContent {
+	display: grid;
+	height: 100%;
+}
+
+#Politics { display: none; }
+#gameTheory { display: none; }
+#Loream { display: none; }
+#Ipsum { display: none; }
+#Who { display: none; }
+ 
